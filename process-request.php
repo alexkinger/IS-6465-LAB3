@@ -36,14 +36,22 @@ if (!$validDate) {
     $errors["preferred_date"] = "Preferred date cannot be in the past.";
 }
 
-/*
-if (!$errors) {
+if ($errors) {
+    echo "<h1>We could not process your request</h1>";
+    echo "<ul>";
+    foreach ($errors as $message) {
+        echo "<li>" . htmlspecialchars($message, ENT_QUOTES, "UTF-8") . "</li>";
+    }
+    echo "</ul>";
+    echo '<p><a href="request-form.html">Back to the form</a></p>';
+} else {
     echo "<h1>Request received</h1>";
     echo "<p>Course: " . htmlspecialchars($course, ENT_QUOTES, "UTF-8") . "</p>";
     echo "<p>Topic: " . htmlspecialchars($topic, ENT_QUOTES, "UTF-8") . "</p>";
+    echo "<p>Preferred date: " . htmlspecialchars($preferredDate, ENT_QUOTES, "UTF-8") . "</p>";
+    echo "<p>Preferred time: " . htmlspecialchars($preferredTime, ENT_QUOTES, "UTF-8") . "</p>";
     echo "<p>Status: Pending review</p>";
 }
-*/
 
 
 ?>
