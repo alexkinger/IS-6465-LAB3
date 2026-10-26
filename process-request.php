@@ -10,7 +10,6 @@ $topic = trim($_POST["topic"] ?? "");
 $preferredDate = trim($_POST["preferreddate"] ?? "");
 $preferredTime = $_POST["preferredtime"] ?? "";
 
-/*
 $errors = [];
 $allowedCourses = ["IS 6465", "IS 6495", "IS 6570"];
 $allowedTimes = ["Morning", "Afternoon", "Evening"];
@@ -22,7 +21,6 @@ if (!in_array($course, $allowedCourses, true)) {
 if (!in_array($preferredTime, $allowedTimes, true)) {
     $errors["preferred_time"] = "Select a valid preferred time.";
 }
-*/
 
 
 /*
