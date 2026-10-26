@@ -1,8 +1,5 @@
 <?php
 
-echo "Hello from the server";
-
-/*
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     http_response_code(405);
     exit("Method not allowed");
@@ -10,8 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 $course = trim($_POST["course"] ?? "");
 $topic = trim($_POST["topic"] ?? "");
+$preferredDate = trim($_POST["preferreddate"] ?? "");
 $preferredTime = $_POST["preferredtime"] ?? "";
-*/
 
 /*
 $errors = [];
