@@ -29,7 +29,7 @@ echo '<br>';
 $courses = ["IS 6465", "IS 6495", "IS 6570"];
 
 foreach ($courses as $course) {
-    echo "<option value='' . htmlspecialchars($course, ENT_QUOTES, 'UTF-8') . ''>";
+    echo "<option value='" . htmlspecialchars($course, ENT_QUOTES, "UTF-8") . "'>";
     echo htmlspecialchars($course, ENT_QUOTES, "UTF-8") . "</option>";
 }
 echo '<br>';
