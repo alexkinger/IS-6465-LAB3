@@ -14,9 +14,13 @@
         <form class="request-form" action="process-request.php" method="post">
         <div class="form-group">
             <label for="course">Course</label>
-            <input id="course" name="course" class="form-control" required>
+            <select id="course" name="course" class="form-control" required>
+                <option value="" selected disabled>Select a course</option>
+                <option value="IS 6465">IS 6465</option>
+                <option value="IS 6495">IS 6495</option>
+                <option value="IS 6570">IS 6570</option>
+            </select>
         </div>
-		
 		<!-- topic -->
 		
 		<!-- preferred date -->		
