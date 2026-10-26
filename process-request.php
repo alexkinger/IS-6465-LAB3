@@ -23,7 +23,6 @@ if (!in_array($preferredTime, $allowedTimes, true)) {
 }
 
 
-/*
 if ($topic === "" || mb_strlen($topic) > 120) {
     $errors["topic"] = "Enter a topic of 1 to 120 characters.";
 }
@@ -33,8 +32,9 @@ $validDate = $date && $date->format("Y-m-d") === $preferredDate;
 
 if (!$validDate) {
     $errors["preferred_date"] = "Enter a valid preferred date.";
+} elseif ($date < new DateTime("today")) {
+    $errors["preferred_date"] = "Preferred date cannot be in the past.";
 }
-*/
 
 /*
 if (!$errors) {
